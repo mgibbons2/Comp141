@@ -1,0 +1,10 @@
+if [[ ! $1 =~ ^[A-Z] ]]; then     //this is still good as a start, but lets check for any instances of @
+    echo "$1 is not a valid Java class name" 
+else        //need an else to catch another case for our if block
+    if[[!$1 =~ @]]; then                //check class name input to see if it contains @ at all
+        echo "Java Class Name cannot contain @."
+    else
+        echo "Valid Class Name"
+exit 2 
+
+fi 
